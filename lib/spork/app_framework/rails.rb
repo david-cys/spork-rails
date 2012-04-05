@@ -3,7 +3,7 @@ class Spork::AppFramework::Rails < Spork::AppFramework
   def preload(&block)
     STDERR.puts "Preloading Rails environment"
     STDERR.flush
-    ENV["RAILS_ENV"] ||= 'test'
+    ENV["RAILS_ENV"] ||= 'staging'
     preload_rails
     yield
   end
